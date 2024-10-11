@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { StaticImageData } from 'next/image';
 import { FaSearch, FaBars } from "react-icons/fa";
 import {
   MdMenuOpen,
@@ -15,7 +16,7 @@ import Logomino from "../../public/Logomino.svg";
 import Logo from "../../public/Logo.svg";
 import SearchComponent from "./Inputsearch";
 import Aksi from "../../public/assets/img/cart/Aksi.png";
-import Cart from "../../public/assets/img/cart/Cart.png";
+import Cart from "../../public/assets/img/cart/cart.png";
 import Voyager from "../../public/assets/img/product/Voyager.png";
 import BlackMamba from "../../public/assets/img/product/BlackMamba.png";
 import Aveola from "../../public/assets/img/product/Aveola.png";
@@ -33,10 +34,11 @@ export default function Navbar() {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [openSubmenu, setOpenSubmenu] = useState<boolean>(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState<number | null>(null);
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [isHydrated, setIsHydrated] = useState<boolean>(false);
   const [isSubmenuSelected, setIsSubmenuSelected] = useState(false); 
   const [openSubmenuVoyager, setOpenSubmenuVoyager] = useState<boolean>(false);
+  const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(null);
+  
 
   useEffect(() => {
     setIsHydrated(true);
@@ -62,7 +64,7 @@ export default function Navbar() {
     setOpenSubmenuVoyager(!openSubmenuVoyager); 
   };
 
-  const handleDropdown = (index: number) => {
+  const handleDropdown = (index: number | null) => {
     setIsDropdownOpen(isDropdownOpen === index ? null : index);
   };
 
@@ -77,8 +79,13 @@ export default function Navbar() {
     }
   };
 
-  const submenuImages = {
-    "Vintage Forreste": Voyager,
+  
+  type SubmenuImagesType = {
+    [key: string]: StaticImageData;
+  };
+  
+  const submenuImages: SubmenuImagesType = {
+   "Vintage Forreste": Voyager,
     "Vintage Strobero": BlackMamba,
     "Vintage Shoe 1.0": Aveola,
     "El Dorado": Borobudur,
@@ -87,10 +94,6 @@ export default function Navbar() {
     "Nurture": LeModiste,
     "Secret Sky 2021": Merapi,
   };
-
-
-
-
 
   
 

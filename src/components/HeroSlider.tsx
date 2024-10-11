@@ -7,11 +7,12 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
 import { useState } from "react";
+import { Swiper as SwiperType } from "swiper";
 import Berikutnya from "../../public/assets/img/Berikutnya.svg";
 import Sebelumnya from "../../public/assets/img/Sebelumnya.svg";
 
 const HeroSlider = () => {
-  const [swiperInstance, setSwiperInstance] = useState<any>(null);
+  const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
 
   const handlePrev = () => {
     swiperInstance?.slidePrev(); 
