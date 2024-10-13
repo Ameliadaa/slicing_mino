@@ -100,7 +100,7 @@ export default function Navbar() {
   return (
     <header>
       {/* Navbar */}
-      <nav className="bg-primary-1 md:bg-primary-theme p-4 z-50 fixed top-0 left-0 w-full">
+      <nav className="bg-primary-1 md:bg-primary-theme p-4 z-50 fixed top-0 left-0 w-full ">
         <div className="container mx-auto flex justify-between items-center">
           {/* Menu  HP*/}
           <div className="md:hidden w-full flex items-center ">
@@ -124,9 +124,12 @@ export default function Navbar() {
               />             
               <Image src={Aksi} alt="Aksi" width={24} height={24} priority />
             </div>
-          </div>
+          </div>      
+                   
+        </div>
 
-          <div className="hidden md:flex items-center space-x-6">
+        <div className="container mx-auto px-16 flex justify-between items-center">
+        <div className="hidden md:flex items-center space-x-6">
             <FaSearch
               className="text-secondary-theme cursor-pointer"
               size={24}
@@ -146,6 +149,7 @@ export default function Navbar() {
               size={32}
             />
           </div>
+
         </div>
 
         {/* Links  Desktop */}

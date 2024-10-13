@@ -30,7 +30,7 @@ const categories = [
 
 const KategoriProduk = () => {  
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 md:px-16 lg:px-20">
       <div className="grid grid-cols-2 gap-4">
         {categories.map((category, index) => (
           <div key={category.id} className="relative">

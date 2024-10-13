@@ -105,7 +105,7 @@ const renderStars = (rating: number) => {
 
 const ProductSlider = () => {
   return (
-    <div className="container mx-auto ">
+    <div className="container mx-auto  md:px-16 lg:px-16">
       <div className="flex justify-between items-center mb-5 px-3">
         <h2 className="text-lg font-bold md:text-3xl">Pilihan Minggu Ini</h2>
         <Button
@@ -140,11 +140,11 @@ const ProductSlider = () => {
                 alt={product.title}
                 width={150}
                 height={150}
-                className="mx-auto"
+                className="mx-auto sm:w-full"
               />
             </div>
 
-            <div className="text-left mt-2">
+            <div className="text-left flex flex-col justify-center  mt-2 ">
               <p className="text-body-span text-tersier-t font-bold uppercase">
                 {product.type}
               </p>
@@ -175,7 +175,7 @@ const ProductSlider = () => {
             <div className="flex justify-center mt-3">
               <Button
                 variant="primary"                
-                className="w-[150px] rounded-[50px] sm:w-full sm:rounded-full font-bold text-kepala-6 leading-4 tracking-wider px-[20px] py-[6px]"
+                className="w-[150px] rounded-[50px]  sm:rounded-full font-bold text-kepala-6 leading-4 tracking-wider px-[20px] py-[6px] sm:w-full"
               >
                 Add to Cart
               </Button>
@@ -213,11 +213,11 @@ const ProductSlider = () => {
                     alt={product.title}
                     width={250}
                     height={250}
-                    className="mx-auto"
+                    className="mx-auto  lg:w-full"
                   />
                 </div>
 
-                <div className="text-left mt-2 px-2">
+                <div className="text-left mt-2 ">
                   <p className="text-xs text-tersier-t font-bold uppercase">
                     {product.type}
                   </p>

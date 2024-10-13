@@ -2,7 +2,7 @@ const Footer = () => {
     return (
         <div className=" text-tersier-3">
             <div className="bg-primary-theme ">
-                <div className="container mx-auto grid gap-4 grid-cols-2 md:flex md:flex-row md:justify-between  px-5 pt-5 pb-[50px] md:pt-[50px]">
+                <div className="container mx-auto grid gap-4 grid-cols-2 md:flex md:flex-row md:justify-between  px-5 pt-5 pb-[50px] md:pt-[50px]  md:px-16 lg:px-20">
                 <div className="space-y-3" >
                     <div  className="font-bold text-sm md:text-base">Mino Store</div>                  
                     <div className="text-body-small md:text-sm" >Yogyakarta</div>
