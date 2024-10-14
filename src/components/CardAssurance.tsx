@@ -43,7 +43,7 @@ export default function CardAssurance() {
         {assurances.map((assurance) => (
           <div
             key={assurance.id}
-            className="bg-primary-1 px-4 py-8 outline outline-1 !outline-tersier-t w-36 responsive-sm:w-full  md:w-72  md:flex md:justify-center"
+            className="bg-primary-1 px-4 py-8 outline outline-1 !outline-tersier-t w-36 responsive-sm:w-full  md:w-72 lg:w-full  md:flex md:justify-center"
           >
             <div className="gap-y-8">
               <Image
