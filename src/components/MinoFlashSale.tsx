@@ -4,8 +4,8 @@ import DaftarBank from "../../public/assets/img/DaftarBank.png";
 
 const MinoFlashSale = () => {
   return (
-    <div className=" container mx-auto ">
-      <div className=" container mx-auto bg-primary-theme flex flex-col p-5 block md:hidden">
+    <div className=" bg-primary-theme  ">
+      <div className=" container mx-auto flex flex-col p-5 md:hidden">
         <h3 className="text-lg font-bold leading-5 text-primary-1">
           MinoStore Flash Sale 12.12
         </h3>

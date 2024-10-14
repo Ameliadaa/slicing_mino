@@ -105,7 +105,7 @@ const renderStars = (rating: number) => {
 
 const ProductSlider = () => {
   return (
-    <div className="container mx-auto  md:px-16 lg:px-16">
+    <div className="container mx-auto md:hidden ">
       <div className="flex justify-between items-center mb-5 px-3">
         <h2 className="text-lg font-bold md:text-3xl">Produk Terbaru</h2>
         <Button
@@ -172,10 +172,10 @@ const ProductSlider = () => {
             </div>
 
             {/* Cart */}
-            <div className="flex justify-center mt-3">
+            <div className="flex justify-start  mt-3">
               <Button
                 variant="primary"                
-                className="w-[150px] rounded-[50px]  sm:rounded-full font-bold text-kepala-6 leading-4 tracking-wider px-[20px] py-[6px] sm:w-full"
+                className="w-[150px] rounded-[50px] sm:rounded-full font-bold text-kepala-6 leading-4 tracking-wider px-[20px] py-[6px] "
               >
                 Add to Cart
               </Button>

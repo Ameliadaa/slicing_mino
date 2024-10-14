@@ -28,30 +28,31 @@ const categories = [
   },
 ];
 
-const KategoriProduk = () => {  
+const KategoriProduk = () => {
   return (
     <div className="container mx-auto px-4 py-8 md:px-16 lg:px-20">
       <div className="grid grid-cols-2 gap-4">
         {categories.map((category, index) => (
           <div key={category.id} className="relative">
-            {/* Gambar Kategori */}
             <Image
               src={category.image}
               alt={category.title}
               width={150}
               height={150}
-              className=" w-[150px] h-[150px] md:w-full md:h-full object-cover rounded-lg"
+              className=" w-40 responsive-sm:w-full h-40 md:w-full md:h-full object-cover rounded-lg"
             />
-            {/* Overlay Teks */}
+
             <div
-  className={`absolute bottom-0  bg-opacity-50 py-2 ${
-    index % 2 === 0 ? "left-0 ml-4 text-left" : "right-6 mr-0 md:right-0 md:mr-4 text-right"
-  } w-full`}  
->
-  <h2 className="text-white font-bold text-sm md:text-lg">
-    {category.title}
-  </h2>
-</div>
+              className={`absolute bottom-0  bg-opacity-50 py-2 ${
+                index % 2 === 0
+                  ? "left-0 ml-4 text-left"
+                  : "right-6 mr-0 md:right-0 md:mr-4 text-right"
+              } w-full`}
+            >
+              <h2 className="text-white font-bold text-sm md:text-lg">
+                {category.title}
+              </h2>
+            </div>
           </div>
         ))}
       </div>

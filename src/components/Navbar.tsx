@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { StaticImageData } from 'next/image';
+import { StaticImageData } from "next/image";
 import { FaSearch, FaBars } from "react-icons/fa";
 import {
   MdMenuOpen,
@@ -35,10 +35,11 @@ export default function Navbar() {
   const [openSubmenu, setOpenSubmenu] = useState<boolean>(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState<number | null>(null);
   const [isHydrated, setIsHydrated] = useState<boolean>(false);
-  const [isSubmenuSelected, setIsSubmenuSelected] = useState(false); 
+  const [isSubmenuSelected, setIsSubmenuSelected] = useState(false);
   const [openSubmenuVoyager, setOpenSubmenuVoyager] = useState<boolean>(false);
-  const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(null);
-  
+  const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(
+    null
+  );
 
   useEffect(() => {
     setIsHydrated(true);
@@ -60,8 +61,8 @@ export default function Navbar() {
     setOpenSubmenu(!openSubmenu);
   };
 
-    const toggleSubmenuVoyager = () => {
-    setOpenSubmenuVoyager(!openSubmenuVoyager); 
+  const toggleSubmenuVoyager = () => {
+    setOpenSubmenuVoyager(!openSubmenuVoyager);
   };
 
   const handleDropdown = (index: number | null) => {
@@ -72,30 +73,27 @@ export default function Navbar() {
     const image = submenuImages[title];
     if (image) {
       setSelectedImage(image);
-      setIsSubmenuSelected(true); 
+      setIsSubmenuSelected(true);
     } else {
       setSelectedImage(null);
-      setIsSubmenuSelected(false); 
+      setIsSubmenuSelected(false);
     }
   };
 
-  
   type SubmenuImagesType = {
     [key: string]: StaticImageData;
   };
-  
+
   const submenuImages: SubmenuImagesType = {
-   "Vintage Forreste": Voyager,
+    "Vintage Forreste": Voyager,
     "Vintage Strobero": BlackMamba,
     "Vintage Shoe 1.0": Aveola,
     "El Dorado": Borobudur,
-    "Unhinted": Kelimutu,
+    Unhinted: Kelimutu,
     "Cursed Again": Mandalika,
-    "Nurture": LeModiste,
+    Nurture: LeModiste,
     "Secret Sky 2021": Merapi,
   };
-
-  
 
   return (
     <header>
@@ -121,15 +119,14 @@ export default function Navbar() {
                 width={70}
                 height={20}
                 priority
-              />             
+              />
               <Image src={Aksi} alt="Aksi" width={24} height={24} priority />
             </div>
-          </div>      
-                   
+          </div>
         </div>
 
         <div className="container mx-auto px-16 flex justify-between items-center">
-        <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-6">
             <FaSearch
               className="text-secondary-theme cursor-pointer"
               size={24}
@@ -143,13 +140,12 @@ export default function Navbar() {
 
           {/* Desktop */}
           <div className="hidden md:flex items-center space-x-6">
-          <Image src={Cart} alt="Cart" width={32} height={32} priority />
+            <Image src={Cart} alt="Cart" width={32} height={32} priority />
             <MdAccountCircle
               className="text-secondary-theme cursor-pointer"
               size={32}
             />
           </div>
-
         </div>
 
         {/* Links  Desktop */}
@@ -166,9 +162,11 @@ export default function Navbar() {
             onMouseEnter={() => handleDropdown(1)}
             onMouseLeave={() => handleDropdown(null)}
           >
-            <button className={ `hover:text-secondary-theme hover:bg-primary-1 focus:bg-primary-1 focus:text-primary-theme flex items-center space-x-1 ${
-              isDropdownOpen === 1 ? "bg-primary-1 text-primary-theme" : ""
-            }`}>
+            <button
+              className={`hover:text-primary-theme hover:bg-primary-1 focus:bg-primary-1 focus:text-primary-theme flex items-center space-x-1 ${
+                isDropdownOpen === 1 ? "bg-primary-1 text-primary-theme" : ""
+              }`}
+            >
               <span className="uppercase px-4 py-2">Belanja</span>
               {isDropdownOpen === 1 ? (
                 <MdKeyboardArrowUp className="text-secondary-theme" size={24} />
@@ -185,21 +183,23 @@ export default function Navbar() {
                   Belanja
                 </h3>
                 <hr className="border-t-[0.3px] border-primary-theme my-2 mx-24" />
-                <div className="flex space-x-4 px-24 text-primary-theme font-normal hover:font-bold text-body-base">             
+                <div className="flex space-x-4 px-24 text-primary-theme font-normal hover:font-bold text-body-base">
                   <div className="space-y-2 w-1/3">
                     <DropdownItem title="Semua Merk" />
                     <div
                       className="relative hover:bg-gray-200 p-2 cursor-pointer"
                       onClick={toggleSubmenu}
                     >
-                     
                       <div
-              className={`flex items-center justify-between text-primary-theme hover:font-bold font-normal text-body-base ${
-                openSubmenu || isSubmenuSelected ? "font-bold" : ""
-              }`}
-            >
+                        className={`flex items-center justify-between text-primary-theme hover:font-bold font-normal text-body-base ${
+                          openSubmenu || isSubmenuSelected ? "font-bold" : ""
+                        }`}
+                      >
                         <span>X-Voyager</span>
-                        <MdKeyboardArrowRight size={20} className="text-secondary-theme" />
+                        <MdKeyboardArrowRight
+                          size={20}
+                          className="text-secondary-theme"
+                        />
                       </div>
                     </div>
                     <DropdownItem title="Balencia" />
@@ -210,7 +210,6 @@ export default function Navbar() {
                     <DropdownItem title="Marathon" />
                   </div>
 
-        
                   <div className="w-1/3 pb-4 px-4 ">
                     {openSubmenu && (
                       <div className="space-y-2">
@@ -218,16 +217,15 @@ export default function Navbar() {
                           <DropdownItem
                             key={index}
                             title={item}
-                            onClick={() => handleSubmenuClick(item)} 
+                            onClick={() => handleSubmenuClick(item)}
                           />
                         ))}
                       </div>
                     )}
                   </div>
 
-             
                   <div className="w-1/3 p-4">
-                    {isSubmenuSelected && selectedImage ? ( 
+                    {isSubmenuSelected && selectedImage ? (
                       <Image
                         src={selectedImage}
                         alt="Submenu Image"
@@ -298,121 +296,120 @@ export default function Navbar() {
             </a>
 
             <div className="py-2">
-            <button
-            onClick={() => toggleMenu("belanja")}
-            className={`w-full text-left hover:bg-primary-theme hover:text-primary-1 hover:font-semibold py-2 px-2 flex justify-between ${
-              openMenu === "belanja" ? "bg-primary-theme text-white" : ""
-            }`} 
-          >
-            Belanja
-            {openMenu === "belanja" ? (
-              <MdKeyboardArrowUp size={24} />
-            ) : (
-              <MdKeyboardArrowDown size={24} />
-            )}
-          </button>
-          {openMenu === "belanja" && (
-            <div className="bg-primary-theme">
-              <div className="mx-auto">
-                <a
-                  href="#"
-                  className="block py-2 px-4 hover:bg-[#213143] text-primary-1 hover:text-primary-1 hover:font-semibold"
-                >
-                  Semua Merek
-                </a>
-         
-                <div
-                  className={`${
-                    openSubmenuVoyager ? "bg-[#213143] text-primary-1" : ""
-                  }`} 
-                >
-                  <button
-                    onClick={toggleSubmenuVoyager}
-                    className={`w-full text-left py-2 px-4 flex justify-between ${
-                      openSubmenuVoyager
-                        ? "text-white font-semibold" 
-                        : "hover:bg-[#213143] text-primary-1"
-                    }`}
-                  >
-                    X-Voyager
-                    {openSubmenuVoyager ? (
-                      <MdKeyboardArrowUp size={24} />
-                    ) : (
-                      <MdKeyboardArrowDown size={24} />
-                    )}
-                  </button>
-             
-                  {openSubmenuVoyager && (
-                    <div className="ml-4 text-sm">
-                      <a
-                        href="#"
-                        className="block py-2 px-4 hover:bg-primary-theme hover:text-primary-1 hover:font-semibold"
-                      >
-                        Vintage Forreste
-                      </a>
-                      <a
-                        href="#"
-                        className="block py-2 px-4 hover:bg-primary-theme hover:text-primary-1 hover:font-semibold"
-                      >
-                        Vintage Strobero
-                      </a>
-                      <a
-                        href="#"
-                        className="block py-2 px-4 hover:bg-primary-theme hover:text-primary-1 hover:font-semibold"
-                      >
-                        Vintage Shoe 1.0
-                      </a>
-                      <a
-                        href="#"
-                        className="block py-2 px-4 hover:bg-primary-theme hover:text-primary-1 hover:font-semibold"
-                      >
-                        El Dorado
-                      </a>
-                      <a
-                        href="#"
-                        className="block py-2 px-4 hover:bg-primary-theme hover:text-primary-1 hover:font-semibold"
-                      >
-                        Unhinted
-                      </a>
-                      <a
-                        href="#"
-                        className="block py-2 px-4 hover:bg-primary-theme hover:text-primary-1 hover:font-semibold"
-                      >
-                        Cursed Again
-                      </a>
-                      <a
-                        href="#"
-                        className="block py-2 px-4 hover:bg-primary-theme hover:text-primary-1 hover:font-semibold"
-                      >
-                        Nurture
-                      </a>
-                      <a
-                        href="#"
-                        className="block py-2 px-4 hover:bg-primary-theme hover:text-primary-1 hover:font-semibold"
-                      >
-                        Secret Sky 2021
-                      </a>
-                    </div>
-                  )}
-                </div>
-                <a
-                  href="#"
-                  className="block py-2 px-4 hover:bg-[#213143] text-primary-1 hover:text-primary-1 hover:font-semibold"
-                >
-                  Balancia
-                </a>
-                <a
-                  href="#"
-                  className="block py-2 px-4 hover:bg-[#213143] text-primary-1 hover:text-primary-1 hover:font-semibold"
-                >
-                  Cadillac
-                </a>
-              </div>
-            </div>
-          )}
-        </div>
+              <button
+                onClick={() => toggleMenu("belanja")}
+                className={`w-full text-left hover:bg-primary-theme hover:text-primary-1 hover:font-semibold py-2 px-2 flex justify-between ${
+                  openMenu === "belanja" ? "bg-primary-theme text-white" : ""
+                }`}
+              >
+                Belanja
+                {openMenu === "belanja" ? (
+                  <MdKeyboardArrowUp size={24} />
+                ) : (
+                  <MdKeyboardArrowDown size={24} />
+                )}
+              </button>
+              {openMenu === "belanja" && (
+                <div className="bg-primary-theme">
+                  <div className="mx-auto">
+                    <a
+                      href="#"
+                      className="block py-2 px-4 hover:bg-[#213143] text-primary-1 hover:text-primary-1 hover:font-semibold"
+                    >
+                      Semua Merek
+                    </a>
 
-            
+                    <div
+                      className={`${
+                        openSubmenuVoyager ? "bg-[#213143] text-primary-1" : ""
+                      }`}
+                    >
+                      <button
+                        onClick={toggleSubmenuVoyager}
+                        className={`w-full text-left py-2 px-4 flex justify-between ${
+                          openSubmenuVoyager
+                            ? "text-white font-semibold"
+                            : "hover:bg-[#213143] text-primary-1"
+                        }`}
+                      >
+                        X-Voyager
+                        {openSubmenuVoyager ? (
+                          <MdKeyboardArrowUp size={24} />
+                        ) : (
+                          <MdKeyboardArrowDown size={24} />
+                        )}
+                      </button>
+
+                      {openSubmenuVoyager && (
+                        <div className="ml-4 text-sm">
+                          <a
+                            href="#"
+                            className="block py-2 px-4 hover:bg-primary-theme hover:text-primary-1 hover:font-semibold"
+                          >
+                            Vintage Forreste
+                          </a>
+                          <a
+                            href="#"
+                            className="block py-2 px-4 hover:bg-primary-theme hover:text-primary-1 hover:font-semibold"
+                          >
+                            Vintage Strobero
+                          </a>
+                          <a
+                            href="#"
+                            className="block py-2 px-4 hover:bg-primary-theme hover:text-primary-1 hover:font-semibold"
+                          >
+                            Vintage Shoe 1.0
+                          </a>
+                          <a
+                            href="#"
+                            className="block py-2 px-4 hover:bg-primary-theme hover:text-primary-1 hover:font-semibold"
+                          >
+                            El Dorado
+                          </a>
+                          <a
+                            href="#"
+                            className="block py-2 px-4 hover:bg-primary-theme hover:text-primary-1 hover:font-semibold"
+                          >
+                            Unhinted
+                          </a>
+                          <a
+                            href="#"
+                            className="block py-2 px-4 hover:bg-primary-theme hover:text-primary-1 hover:font-semibold"
+                          >
+                            Cursed Again
+                          </a>
+                          <a
+                            href="#"
+                            className="block py-2 px-4 hover:bg-primary-theme hover:text-primary-1 hover:font-semibold"
+                          >
+                            Nurture
+                          </a>
+                          <a
+                            href="#"
+                            className="block py-2 px-4 hover:bg-primary-theme hover:text-primary-1 hover:font-semibold"
+                          >
+                            Secret Sky 2021
+                          </a>
+                        </div>
+                      )}
+                    </div>
+                    <a
+                      href="#"
+                      className="block py-2 px-4 hover:bg-[#213143] text-primary-1 hover:text-primary-1 hover:font-semibold"
+                    >
+                      Balancia
+                    </a>
+                    <a
+                      href="#"
+                      className="block py-2 px-4 hover:bg-[#213143] text-primary-1 hover:text-primary-1 hover:font-semibold"
+                    >
+                      Cadillac
+                    </a>
+                  </div>
+                </div>
+              )}
+            </div>
+
             <div className="py-2">
               <button
                 onClick={() => toggleMenu("bundel1")}
@@ -437,13 +434,12 @@ export default function Navbar() {
                     href="#"
                     className="block py-2 px-4 hover:bg-primary-theme hover:text-primary-1 hover:font-semibold"
                   >
-                   Item 2
+                    Item 2
                   </a>
                 </div>
               )}
             </div>
 
-      
             <div className="py-2">
               <button
                 onClick={() => toggleMenu("bundel2")}
@@ -462,13 +458,13 @@ export default function Navbar() {
                     href="#"
                     className="block py-2 px-4 hover:bg-primary-theme hover:text-primary-1 hover:font-semibold"
                   >
-                  Item 1
+                    Item 1
                   </a>
                   <a
                     href="#"
                     className="block py-2 px-4 hover:bg-primary-theme hover:text-primary-1 hover:font-semibold"
                   >
-                  Item 2
+                    Item 2
                   </a>
                 </div>
               )}
@@ -517,51 +513,58 @@ export default function Navbar() {
   );
 }
 
-  // Dropdown dekstop
-  const DropdownButton = ({
-    title,
-    index,
-    isOpen,
-    onToggle,
-    children,
-  }: {
-    title: string;
-    index: number;
-    isOpen: number | null;
-    onToggle: (index: number | null) => void;
-    children: React.ReactNode;
-  }) => (
-    <div
-      className="relative"
-      onMouseEnter={() => onToggle(index)}
-      onMouseLeave={() => onToggle(null)}
-    >
-      <button className="hover:text-primary-theme hover:bg-primary-1 focus:bg-primary-1 focus:text-primary-theme flex items-center space-x-1">
-        <span className="uppercase px-4 py-2">{title}</span>
-        <div
-          className={`transform transition-transform duration-1000 ${
-            isOpen === index ? "rotate-360" : ""
-          }`}
-        >
-          {isOpen === index ? (
-            <MdKeyboardArrowUp className="text-secondary-theme" size={24} />
-          ) : (
-            <MdKeyboardArrowDown className="text-secondary-theme" size={24} />
-          )}
-        </div>
-      </button>
-      {isOpen === index && (
-        <div className="fixed top-[120px] left-0 right-0 w-screen bg-primary-1 text-primary-t p-4 shadow-lg z-50 text-body-base">
-          {children}
-        </div>
-      )}
-    </div>
-  );
-  
-  const DropdownItem = ({ title, onClick }: { title: string; onClick?: () => void }) => (
-    <div className="block  hover:bg-gray-100 p-2 cursor-pointer text-primary-theme font-normal hover:font-bold text-body-base" onClick={onClick}>
-      {title}
-    </div>
-  );
+// Dropdown dekstop
+const DropdownButton = ({
+  title,
+  index,
+  isOpen,
+  onToggle,
+  children,
+}: {
+  title: string;
+  index: number;
+  isOpen: number | null;
+  onToggle: (index: number | null) => void;
+  children: React.ReactNode;
+}) => (
+  <div
+    className="relative"
+    onMouseEnter={() => onToggle(index)}
+    onMouseLeave={() => onToggle(null)}
+  >
+    <button className="hover:text-primary-theme hover:bg-primary-1 focus:bg-primary-1 focus:text-primary-theme flex items-center space-x-1">
+      <span className="uppercase px-4 py-2">{title}</span>
+      <div
+        className={`transform transition-transform duration-1000 ${
+          isOpen === index ? "rotate-360" : ""
+        }`}
+      >
+        {isOpen === index ? (
+          <MdKeyboardArrowUp className="text-secondary-theme" size={24} />
+        ) : (
+          <MdKeyboardArrowDown className="text-secondary-theme" size={24} />
+        )}
+      </div>
+    </button>
+    {isOpen === index && (
+      <div className="fixed top-[120px] left-0 right-0 w-screen bg-primary-1 text-primary-t p-4 shadow-lg z-50 text-body-base">
+        {children}
+      </div>
+    )}
+  </div>
+);
 
-
+const DropdownItem = ({
+  title,
+  onClick,
+}: {
+  title: string;
+  onClick?: () => void;
+}) => (
+  <div
+    className="block  hover:bg-gray-100 p-2 cursor-pointer text-primary-theme font-normal hover:font-bold text-body-base"
+    onClick={onClick}
+  >
+    {title}
+  </div>
+);

@@ -35,10 +35,12 @@ const config: Config = {
         'body-base': ['16px', { lineHeight: '1.05', fontWeight: '400' }],
         'body-small': ['12px', { lineHeight: '1.05', fontWeight: '400' }],
         'body-span': ['10px', { lineHeight: '1.05', fontWeight: '700' }],
-      
-      
+           
 
-      }
+      },
+      screens: {
+        'responsive-sm': {'min': '365px', 'max': '768px'}, 
+      },
     },
   },
   plugins: [],

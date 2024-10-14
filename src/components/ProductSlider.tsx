@@ -105,7 +105,7 @@ const renderStars = (rating: number) => {
 
 const ProductSlider = () => {
   return (
-    <div className="container mx-auto  md:px-16 lg:px-16">
+    <div className="container mx-auto px-2  md:px-16 lg:px-16">
       <div className="flex justify-between items-center mb-5 px-3">
         <h2 className="text-lg font-bold md:text-3xl">Pilihan Minggu Ini</h2>
         <Button
@@ -125,7 +125,7 @@ const ProductSlider = () => {
       {/* hp */} 
       <div className="md:hidden grid grid-cols-2 gap-4">  
         {products.map((product) => (
-          <div key={product.id} className="p-3 rounded-lg relative">
+          <div key={product.id} className="p-2 rounded-lg relative">
             {product.isSale && (
               <span className="absolute top-6 left-6 bg-tersier-theme text-white text-xs px-2 py-1 rounded-[50px] flex items-center z-30">
                 <MdMonetizationOn className="w-4 h-4 mr-1" />
@@ -172,10 +172,10 @@ const ProductSlider = () => {
             </div>
 
             {/* Cart */}
-            <div className="flex justify-center mt-3">
+            <div className="flex justify-start mt-3">
               <Button
                 variant="primary"                
-                className="w-[150px] rounded-[50px]  sm:rounded-full font-bold text-kepala-6 leading-4 tracking-wider px-[20px] py-[6px] sm:w-full"
+                className="w-[150px] rounded-[50px]  sm:rounded-full font-bold text-kepala-6 leading-4 tracking-wider px-[20px] py-[6px] "
               >
                 Add to Cart
               </Button>
