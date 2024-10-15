@@ -42,10 +42,10 @@ export default function CardAssurance() {
       <div className="grid gap-x-4 gap-y-6 md:gap-9 grid-cols-2 py-5 md:flex flex-row justify-center">
         {assurances.map((assurance) => (
           <div
-            key={assurance.id}
+            key={assurance.id} 
             className="bg-primary-1 px-4 py-8 outline outline-1 !outline-tersier-t w-36 responsive-sm:w-full  md:w-72 lg:w-full  md:flex md:justify-center"
           >
-            <div className="gap-y-8">
+            <div className="gap-y-8 ">
               <Image
                 src={assurance.image}
                 alt={assurance.alt}
