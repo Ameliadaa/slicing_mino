@@ -107,7 +107,7 @@ export default function Navbar() {
                 {isMenuOpen ? (
                   <MdMenuOpen
                     size={24}
-                    className="text-primary-1 text-primary-theme"
+                    className="text-primary-theme"
                   />
                 ) : (
                   <FaBars size={24} className="text-primary-theme" />

@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -23,7 +24,7 @@ const HeroSlider = () => {
   };
 
   return (
-    <div className="relative md:pt-20 w-full z-10 ">
+    <div className="relative  w-full z-10 md:pt-28">
       <Swiper
         onSwiper={(swiper) => setSwiperInstance(swiper)} 
         modules={[Navigation, Pagination, Autoplay]}
@@ -39,7 +40,6 @@ const HeroSlider = () => {
         speed={800} 
         className="h-full"
       >
-       
         <SwiperSlide>
           <div className="relative w-full h-[173px] md:h-[656px]">
             <Image
@@ -52,7 +52,6 @@ const HeroSlider = () => {
           </div>
         </SwiperSlide>
 
-    
         <SwiperSlide>
           <div className="relative w-full h-[173px] md:h-[656px]">
             <Image
@@ -78,22 +77,26 @@ const HeroSlider = () => {
         </SwiperSlide>
       </Swiper>
 
-      {/* kustom ikon*/}
-      <div
-        className="swiper-button-prev absolute left-8 px-4 md:px-14  top-1/2 transform -translate-y-auto z-10 cursor-pointer"
-        onClick={handlePrev}
-      >
-        <Image src={Sebelumnya} alt="Sebelumnya" className="w-12 h-12 md:w-20 md:h-20" />
-        <span className="hidden">Previous</span>
+ 
+ 
+       <div className="container mx-auto absolute inset-0 flex justify-between items-center px-4 md:px-20  ">
+        <div
+          className="swiper-button-prev cursor-pointer absolute top-1/2 left-4 md:left-0 transform -translate-y-auto md:ml-12"
+          onClick={handlePrev}
+        >
+          <Image src={Sebelumnya} alt="Sebelumnya" className="w-12 h-12 md:w-20 md:h-20" />
+          <span className="hidden">Previous</span>
+        </div>
+
+        <div
+          className="swiper-button-next cursor-pointer absolute top-1/2 right-4 md:right-0 transform -translate-y-auto md:mr-12"
+          onClick={handleNext}
+        >
+          <Image src={Berikutnya} alt="Berikutnya" className="w-12 h-12 md:w-20 md:h-20" />
+          <span className="hidden">Next</span>
+        </div>
       </div>
 
-      <div
-        className="swiper-button-next absolute right-8 px-4 md:px-14  top-1/2 transform -translate-y-auto z-10 cursor-pointer"
-        onClick={handleNext}
-      >
-        <Image src={Berikutnya} alt="Berikutnya" className="w-12 h-12 md:w-20 md:h-20" />
-        <span className="hidden">Next</span>
-      </div>
     </div>
   );
 };

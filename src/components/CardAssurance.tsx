@@ -38,12 +38,12 @@ const assurances = [
 
 export default function CardAssurance() {
   return (
-    <div className="p-5 container mx-auto md:px-16 lg:px-20">
-      <div className="grid gap-x-4 gap-y-6 md:gap-9 grid-cols-2 py-5 md:flex flex-row justify-center">
+    <div className="p-5 container mx-auto md:px-20 ">
+      <div className="grid gap-x-6 gap-y-6 md:gap-9 grid-cols-2 py-5 md:flex flex-row justify-center">
         {assurances.map((assurance) => (
           <div
             key={assurance.id} 
-            className="bg-primary-1 px-4 py-8 outline outline-1 !outline-tersier-t w-36 responsive-sm:w-full  md:w-72 lg:w-full  md:flex md:justify-center"
+            className="bg-primary-1 px-4 py-8 outline outline-1 !outline-tersier-t w-36 responsive-sm:w-full  md:w-72   md:flex md:justify-center"
           >
             <div className="gap-y-8 ">
               <Image

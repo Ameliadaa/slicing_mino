@@ -11,10 +11,10 @@ const Merk = () => {
         Merek - Merek Tergabung
       </h3>
       <div className="flex flex-row justify-center gap-x-8 py-3 md:mt-4">
-        <Image src={wings} alt="wings" width={65} height={40} priority />
-        <Image src={footware} alt="footware" width={65} height={40} priority />
-        <Image src={maraton} alt="maraton" width={65} height={65} priority />
-        <Image src={thunder} alt="thunder" width={65} height={65} priority />
+        <Image src={wings} alt="wings" className="w-14 h-14"  priority />
+        <Image src={footware} alt="footware" className="w-14 h-14" priority />
+        <Image src={maraton} alt="maraton" className="w-14 h-14" priority />
+        <Image src={thunder} alt="thunder" className="w-14 h-14" priority />
       </div>
     </div>
   );

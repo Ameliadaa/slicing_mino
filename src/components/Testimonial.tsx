@@ -55,7 +55,7 @@ const testimonials: Testimonial[] = [
 
 const Testimonials = () => {
   return (
-    <div className="max-w-7xl container mx-auto px-4 pb-8 md:hidden">
+    <div className="container mx-auto px-4 pb-8 md:hidden">
       <h2 className="text-center text-kepala-5 font-bold mb-6 md:text-2xl">
         Apa Kata Mereka?
       </h2>

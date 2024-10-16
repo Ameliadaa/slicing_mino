@@ -67,14 +67,6 @@ body {
   text-align: center; 
 }
 
-/* .custom-pagination .swiper-pagination-bullet {
-  background-color: #ccc; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
-}
-
-.custom-pagination .swiper-pagination-bullet-active {
-  background-color: #000; 
-} */
 
 
 @layer utilities {
