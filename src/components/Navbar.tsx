@@ -101,7 +101,7 @@ export default function Navbar() {
       <nav className="bg-primary-1 md:bg-primary-theme p-4 z-50 fixed top-0 left-0 w-full ">
         <div className="container mx-auto flex justify-between items-center">
           {/* Menu  HP*/}
-          <div className="md:hidden w-full flex items-center ">
+          <div className="md:hidden w-full flex items-center responsive-sm:px-4 ">
             <div className="w-full flex justify-between items-center">
               <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 {isMenuOpen ? (

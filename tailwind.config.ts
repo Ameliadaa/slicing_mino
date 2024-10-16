@@ -39,7 +39,7 @@ const config: Config = {
 
       },
       screens: {
-        'responsive-sm': {'min': '360px'},
+        'responsive-sm': {'min': '380px'},
          'md': {'min': '1024px'},
          
       },
