@@ -79,7 +79,7 @@ const HeroSlider = () => {
 
  
  
-       <div className="container mx-auto absolute inset-0 flex justify-between items-center px-4 md:px-20  ">
+       <div className="container mx-auto absolute inset-0 flex justify-between items-center px-5 md:px-20  ">
         <div
           className="swiper-button-prev cursor-pointer absolute top-1/2 left-4 md:left-0 transform -translate-y-auto md:ml-12"
           onClick={handlePrev}

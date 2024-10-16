@@ -18,7 +18,7 @@ const CTAComponent = () => {
    
       <div className=" absolute inset-0 bg-black bg-opacity-30 flex items-center">
         <div className="container mx-auto">
-        <div className="text-white flex flex-col justify-start  text-left md:flex-row md:justify-between px-4  md:px-20 space-y-4 md:space-y-0 md:space-x-4">
+        <div className="text-white flex flex-col justify-start  text-left md:flex-row md:justify-between px-5  md:px-20 space-y-4 md:space-y-0 md:space-x-4">
           <div>
             <h2 className="text-xl md:text-2xl font-bold w-52 md:w-[390px]">Diskon Nggak Pake Tanggung.</h2>
             <p className="text-base leading-6 md:text-base mt-2 w-[200px] md:w-[390px]">Plus bonus ongkir ke seluruh Indonesia.</p>

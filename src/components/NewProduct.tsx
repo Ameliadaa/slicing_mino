@@ -14,76 +14,79 @@ import Sebelumnya from "../../public/assets/img/Sebelumnya.svg";
 const products = [
   {
     id: 1,
-    title: "Playoon - Kalimutu Run Model A",
-    image: "/assets/img/product/Kelimutu.png",
-    price: "Rp 325.000,-",
-    oldPrice: "Rp 387.000,-",
+    title: "Machia Edwondo",
+    image: "/assets/img/product/MachiaEdwondo.png",
+    price: "Rp 338.000,-",
+    oldPrice: "Rp 362.000,-",
     isSale: true,
     rating: 3.5,
-    type: "Sepatu Pria, Olahraga",
+    type: "sepatu Pria, kasual",
   },
   {
     id: 2,
     title: "Le Modiste - Sepatu Kasual Wanita",
-    image: "/assets/img/product/LeModiste.png",
-    price: "Rp 319.000,-",
+    image: "/assets/img/product/MachiaAndora.png",
+    price: "Rp 623.000,-",
     isSale: true,
     rating: 3.5,
-    type: "Sepatu Wanita, Kasual",
+    type: "sepatu Pria, kasual",
   },
   {
     id: 3,
-    title: "X-Voyager Vintage Forrester",
-    image: "/assets/img/product/Voyager.png",
-    price: "Rp 399.000,-",
+    title: "Everest Sepatu Gunung Model Kinabalu",
+    image: "/assets/img/product/Everest.png",
+    price: "Rp 910.000,-",
+    oldPrice: "Rp 1.080.000,-",
     isSale: true,
-    rating: 5.0,
-    type: "Sepatu Pria, kasual",
+    rating: 3.5,
+    type: "sepatu pria, boots",
   },
   {
     id: 4,
-    title: "Le Cadillac Insigma 91",
-    image: "/assets/img/product/Cadillac.png",
-    price: "Rp 387.000,-",
+    title: "Playoon - Edisi Khusus Borobudur Marathon 2020",
+    image: "/assets/img/product/Borobudur.png",
+    price: "Rp 420.000,-",
     isSale: true,
     rating: 3.5,
-    type: "Sepatu Pria, Kasual",
+    type: "sepatu pria, olahraga",
   },
   {
     id: 5,
-    title: "Balancia Sandal Kulit B",
-    image: "/assets/img/product/BalanciaB.png",
-    price: "Rp 180.000,-",
+    title: "FlattyShoe Mandalika 3",
+    image: "/assets/img/product/Mandalika.png",
+    price: "Rp 367.000,-",
     isSale: true,
     rating: 3.5,
-    type: "sandal, jepit pria",
+    type: "sepatu Pria, kasual",
   },
   {
     id: 6,
-    title: "Balancia Sandal Kulit C",
+    title: "Playoon - Merapi Jogger Shoe",
     image: "/assets/img/product/BalanciaC.png",
-    price: "Rp 212.000,-",
+    price: "Rp. 288.000,-",
+    oldPrice: "Rp 391.000,-",
     isSale: true,
-    rating: 4.5,
-    type: "sandal, jepit pria",
+    rating: 3.5,
+    type: "sepatu Pria, olahraga",
   },
   {
     id: 7,
-    title: "Playoon - Aveola Diana",
-    image: "/assets/img/product/Aveola.png",
-    price: "Rp 332.000,-",
+    title: "Playoon - K32 Jogger Shoe",
+    image: "/assets/img/product/PlayoonJogger.png",
+    price: "Rp 346.000,-",
     isSale: true,
     rating: 4.0,
-    type: "sepatu wanita, olahraga",
+    type: "sepatu pria, olahraga",
   },
   {
     id: 8,
-    title: "Playoon - Black Mamba",
-    image: "/assets/img/product/BlackMamba.png",
+    title: "El-Tegra Krakatoa 2 Sepatu  Pendaki",
+    image: "/assets/img/product/ElTegra.png",
     price: "Rp 342.000,-",
+    oldPrice: "Rp 562.000,-",
     isSale: true,
     rating: 3.5,
-    type: "sepatu wanita, olahraga",
+    type: "sepatu pria, boots",
   },
 ];
 
@@ -103,29 +106,29 @@ const renderStars = (rating: number) => {
   return stars;
 };
 
-const ProductSlider = () => {
+const NewProductSlider = () => {
   return (
-    <div className="container mx-auto md:hidden ">
+    <div className="container mx-auto px-2 md:hidden  md:px-16 ">
       <div className="flex justify-between items-center mb-5 px-3">
-        <h2 className="text-lg font-bold md:text-3xl">Produk Terbaru</h2>
+        <h2 className="text-lg font-bold md:text-3xl">Product Terbaru</h2>
         <Button
           variant="outline"
-          className="rounded-[60px] w-[118px] text-sm leading-4 tracking-wider px-6 py-2.5 md:hidden"
+          className="rounded-[50px] w-[108px] text-kepala-6 leading-4 tracking-wider px-6 py-2.5 md:hidden"
         >
           Lainnya
         </Button>
         <Button
           variant="outline"
-          className="hidden md:block rounded-[60px] w-[220px] text-base leading-4 tracking-wider px-6 py-2.5"
+          className="hidden md:block rounded-[80px] w-[220px] text-base leading-4 tracking-wider px-6 py-2.5"
         >
           Produk Lainnya
         </Button>
       </div>
 
-    {/* hp */} 
-    <div className="md:hidden grid grid-cols-2 gap-4">  
+      {/* hp */} 
+      <div className="md:hidden grid grid-cols-2 gap-4">  
         {products.map((product) => (
-          <div key={product.id} className="p-3 rounded-lg relative">
+          <div key={product.id} className="p-2 rounded-lg relative">
             {product.isSale && (
               <span className="absolute top-6 left-6 bg-tersier-theme text-white text-xs px-2 py-1 rounded-[50px] flex items-center z-30">
                 <MdMonetizationOn className="w-4 h-4 mr-1" />
@@ -172,10 +175,10 @@ const ProductSlider = () => {
             </div>
 
             {/* Cart */}
-            <div className="flex justify-start  mt-3">
+            <div className="flex justify-start mt-3">
               <Button
                 variant="primary"                
-                className="w-[150px] rounded-[50px] sm:rounded-full font-bold text-kepala-6 leading-4 tracking-wider px-[20px] py-[6px] "
+                className="w-[150px] rounded-[50px]  sm:rounded-full font-bold text-kepala-6 leading-4 tracking-wider px-[20px] py-[6px] "
               >
                 Add to Cart
               </Button>
@@ -269,4 +272,4 @@ const ProductSlider = () => {
   );
 };
 
-export default ProductSlider;
+export default NewProductSlider;

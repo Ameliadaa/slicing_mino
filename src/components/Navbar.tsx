@@ -89,9 +89,9 @@ export default function Navbar() {
     "Vintage Strobero": BlackMamba,
     "Vintage Shoe 1.0": Aveola,
     "El Dorado": Borobudur,
-    Unhinted: Kelimutu,
+    "Unhinted": Kelimutu,
     "Cursed Again": Mandalika,
-    Nurture: LeModiste,
+    "Nurture": LeModiste,
     "Secret Sky 2021": Merapi,
   };
 

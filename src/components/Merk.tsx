@@ -6,7 +6,7 @@ import thunder from "../../public/assets/img/Merk/thunder.png";
 
 const Merk = () => {
   return (
-    <div className="p-4 md:hidden">
+    <div className="p-5 pt-0 md:hidden">
       <h3 className="flex justify-center py-2 text-xl md:text-2xl font-bold">
         Merek - Merek Tergabung
       </h3>

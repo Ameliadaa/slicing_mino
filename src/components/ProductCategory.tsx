@@ -30,7 +30,7 @@ const categories = [
 
 const KategoriProduk = () => {
   return (
-    <div className="container mx-auto px-4 py-8 md:px-16 lg:px-20">
+    <div className="container mx-auto px-4 py-8 md:px-20">
       <div className="grid grid-cols-2 gap-4">
         {categories.map((category, index) => (
           <div key={category.id} className="relative">
@@ -39,7 +39,7 @@ const KategoriProduk = () => {
               alt={category.title}
               width={150}
               height={150}
-              className=" w-40 responsive-sm:w-full h-40 md:w-full md:h-full object-cover rounded-lg"
+              className=" w-40 responsive-sm:w-full h-40 md:w-full md:h-full object-cover"
             />
 
             <div

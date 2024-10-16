@@ -55,7 +55,7 @@ const testimonials: Testimonial[] = [
 
 const Testimonials = () => {
   return (
-    <div className="container mx-auto px-4 pb-8 md:hidden">
+    <div className="container mx-auto px-4 pb-6 md:hidden">
       <h2 className="text-center text-kepala-5 font-bold mb-6 md:text-2xl">
         Apa Kata Mereka?
       </h2>
@@ -80,7 +80,7 @@ const Testimonials = () => {
       >
         {testimonials.map((testimonial) => (
           <SwiperSlide key={testimonial.id}>
-            <div className="bg-white border container mx-auto  p-4 rounded-lg shadow-md mb-4 h-[220px] w-[320px] responsive-sm:w-full">
+            <div className="bg-white border border-b container mx-auto  p-4 rounded-lg shadow-md mb-4 h-[220px] w-[320px] responsive-sm:w-full">
               <p className="text-gray-700 text-sm mb-4">
                 {testimonial.message}
               </p>
@@ -88,7 +88,7 @@ const Testimonials = () => {
                 <Image
                   src={testimonial.avatarUrl}
                   alt={testimonial.name}
-                  className="w-10 h-10 rounded-full mr-3"
+                  className="w-10 h-10 rounded-lg mr-3"
                   width={40}
                   height={40}
                 />

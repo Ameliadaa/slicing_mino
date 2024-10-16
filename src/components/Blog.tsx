@@ -57,7 +57,7 @@ const blogPosts: BlogPost[] = [
 
 const Blog = () => {
   return (
-    <div className="container mx-auto px-5 py-12  md:px-16 lg:px-20">
+    <div className="container mx-auto px-5 pt-8 pb-1 md:pt-12 md:pb-8  md:px-20">
       <div className="flex justify-between items-center mb-5">
         <h2 className="text-lg font-bold md:text-3xl">Blog</h2>
         <Button

@@ -105,7 +105,7 @@ const renderStars = (rating: number) => {
 
 const ProductSlider = () => {
   return (
-    <div className="container mx-auto px-2  md:px-16 lg:px-16">
+    <div className="container mx-auto px-2  md:px-16">
       <div className="flex justify-between items-center mb-5 px-3">
         <h2 className="text-lg font-bold md:text-3xl">Pilihan Minggu Ini</h2>
         <Button
